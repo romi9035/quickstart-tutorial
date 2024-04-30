@@ -5,7 +5,7 @@
     "use strict";
 
     new Button({
-        text: "Ready...",
+     ui5.quickstart.index   text: "Ready...",
         press() {
             MessageToast.show("Hello World!");
         }
@@ -14,8 +14,10 @@
 });*/
 sap.ui.define([
     "sap/ui/core/mvc/XMLView"
-], function(XMLView) {
+], function (XMLView) {
     'use strict';
-    
-    
+
+    XMLView.create({
+        viewName: "ui5.quickstart.App"
+    }).then((oView) => oView.placeAt("content"))
 });
